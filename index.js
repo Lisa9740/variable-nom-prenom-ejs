@@ -10,6 +10,7 @@ app.get('/', function(req, res) {
     
 })
 
+//fonction qui renvoie la variable prenom 
   function get_prenom(res){
     var prenom = {prenom : "Alison"};
 
