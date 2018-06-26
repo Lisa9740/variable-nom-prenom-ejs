@@ -6,22 +6,18 @@ app.set('view engine', 'ejs');
 
 
 app.get('/', function(req, res) {
-    // création de la variable prenom
+   get_prenom(res);
+    
+})
+
+  function get_prenom(res){
     var prenom = {prenom : "Alison"};
-   
-    get_prenom(function(prenom){
-        //console.log(hotels); 
-    })
-    res.render('index', {
-        prenom: prenom
-    });
-    //   res.render('index', prenom );
-  });
 
-  function get_prenom(cb,result){
+    res.render('index', 
+   prenom );
+    
+};
 
-  cb (result);
-}
 
   
   app.listen(port, function(){
